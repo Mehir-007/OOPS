@@ -70,6 +70,17 @@ public:
     }
 };
 
+class Teacher:public Employee {
+public:
+    string Subject;
+    void PrepareLesson(){
+        cout<<Name<<" is preparing "<<Subject<<" lesson."<<endl;
+    }
+    Teacher(string name,string company,int age,string subject)
+    :Employee(name,company,age){
+         Subject=subject;
+    }
+};
 int main()
 {
 
@@ -77,6 +88,7 @@ int main()
    
     d.IntroduceYourself();
     d.FixBug();
-     
-
+    Teacher t("Mehir","Unacademy",30,"C++ Programming");
+    t.PrepareLesson();
+    t.AskForPromotion();
 } 
